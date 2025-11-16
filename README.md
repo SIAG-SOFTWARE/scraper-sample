@@ -25,6 +25,7 @@ Useful as a template for production scrapers or as a learning example.
 
 ## 📁 Project Structure
 
+```
 scraper-sample/
 │
 ├── scraper/
@@ -39,9 +40,7 @@ scraper-sample/
 ├── .env.example
 ├── requirements.txt
 └── README.md
-
-yaml
-Copiar código
+```
 
 ---
 
