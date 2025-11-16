@@ -1,35 +1,99 @@
-# 🔍 Web Scraper Sample — SIAG Software
+# 🕸️ SIAG Software — Web Scraper Sample
 
-This repository contains a **minimal, ethical web scraper** example made with Python.  
-Designed to show how to extract and process public data safely, respecting target websites and privacy guidelines.
+A clean, professional demo scraper showing how SIAG Software structures Python-based scraping tools using:
 
----
+- Requests  
+- BeautifulSoup  
+- Environment-based configuration  
+- Modular architecture  
+- CSV export pipeline  
 
-### 🧩 Features
-- Clean and modular scraping logic  
-- Configurable target URL and parsing rules  
-- Export to CSV or JSON  
-- Includes basic error handling and polite request delays
-
----
-
-### ⚙️ Tech Stack
-- **Python 3.10+**
-- **requests**
-- **BeautifulSoup4**
+Useful as a template for production scrapers or as a learning example.
 
 ---
 
-### 🚀 Usage
+## 🚀 Features
+
+- Configurable via `.env`
+- Isolated parser + exporter modules
+- Clear project structure
+- Basic error handling
+- CSV exporting
+- Easy to extend or adapt
+
+---
+
+## 📁 Project Structure
+
+scraper-sample/
+│
+├── scraper/
+│ ├── config.py
+│ ├── scraper.py
+│ ├── parser.py
+│ └── exporter.py
+│
+├── data/
+│ └── output.csv
+│
+├── .env.example
+├── requirements.txt
+└── README.md
+
+yaml
+Copiar código
+
+---
+
+## 🛠️ Setup
+
+### 1. Install dependencies
+
 ```bash
-git clone https://github.com/SIAG-Software/scraper-sample.git
-cd scraper-sample
 pip install -r requirements.txt
-python scraper.py
-⚖️ Ethical Notice
-This script is intended for educational and research purposes only.
-Please scrape only public and permitted data, and respect each site’s robots.txt and Terms of Service.
+2. Create .env
+bash
+Copiar código
+cp .env.example .env
+Edit it:
+
+ini
+Copiar código
+TARGET_URL=https://example.com
+OUTPUT_FILE=data/output.csv
+USER_AGENT=SIAG-Scraper/1.0
+▶️ Running the scraper
+bash
+Copiar código
+python -m scraper.scraper
+Output is saved to:
+
+bash
+Copiar código
+data/output.csv
+🧩 How it works
+1. Fetch page
+Using requests with custom headers.
+
+2. Parse HTML
+parser.py extracts all <h2> tags.
+
+3. Export
+Results saved into a clean CSV file.
+
+📦 Tech Stack
+Python 3.10+
+
+Requests
+
+BeautifulSoup
+
+python-dotenv
 
 🧠 About SIAG Software
-We develop autonomous intelligent systems and data automation tools that combine efficiency with ethics.
-More information at SIAG Software GitHub.
+SIAG Software builds AI automations, chatbots, scrapers, workflow systems and full-stack solutions for small and modern businesses.
+
+Contact:
+siag.software@protonmail.com
+
+Website coming soon.
